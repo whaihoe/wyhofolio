@@ -1,3 +1,12 @@
-.title{
-    color: gray;
+#index-links{
+    list-style-type: none;
+}
+
+#index-links li a{
+    text-decoration: none;
+    color: grey;
+}
+
+#index-links li a:hover{
+    color: rgb(181, 181, 181);
 }

@@ -5,7 +5,7 @@ const port = 3000
 
 app.set('view engine', 'ejs');
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views/public'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.get('/', function(req, res) {

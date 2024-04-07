@@ -8,13 +8,28 @@
     <title>Wyho Portfolio</title>
 </head>
 <%- include("../partials/nav.ejs") %>
-<body class="vh-100">
-    <div class="container d-flex align-items-center justify-content-center h-100">
+<body>
+    <div id="index-body" class="container d-flex align-items-center justify-content-center flex-column">
         <div>
             <h1 class="title text-center">Hey! I am Whai Hoe</h1>
             <h3>I am a web developer, UI/UX designer and a programmer!</h3>
+            <div class="pt-2">
+                <ul id="index-links" class="ps-0">
+                    <li class="h3"><a href="/portfolio">Portfolio</a></li>
+                    <li class="h3"><a href="/contact-me">Contact me</a></li>
+                    <li class="h3"><a href="/education">Education</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
+
+<script>
+    navbarHeight = document.querySelector("#navbar").offsetHeight;
+    console.log(navbarHeight);
+    indexBody = document.querySelector("#index-body")
+    height = document.documentElement.clientHeight - navbarHeight + "px"
+    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
+    indexBody.style.height = height
+</script>
