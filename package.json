@@ -10,7 +10,8 @@
 
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js | npm run scss",
-    "scss": "sass --watch views/public/scss/main.scss views/public/styles/main.css"
+    "dev-win": "nodemon app.js | npm run scss",
+    "dev-mac": "nodemon app.js & npm run scss",
+    "scss": "sass --watch views/public/scss/main.scss:views/public/styles/main.css"
 }
 }
