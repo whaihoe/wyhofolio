@@ -1,1 +1,57 @@
 @import "pages/index-styles.scss";
+@import "pages/contact-styles.scss";
+body{
+    background-color: rgb(28, 28, 28) !important;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .gradient {
+    --size: 300px;
+    --speed: 6s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 4));
+    background-image: linear-gradient(hsla(170, 82%, 57%, 0.85), hsl(252, 82, 57));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 50% 30% 70% 50% / 50% 30% 70% 50%;
+    position: absolute;
+    z-index: -100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  @media (min-width: 720px) {
+    .gradient {
+      --size: 500px;
+    }
+  }
+  
+  body {
+    background-color: #222;
+    inset: 0;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* This is just to transition when you change the viewport size. */
+  * {
+    transition: all 0.25s ease-out;
+  }
+  

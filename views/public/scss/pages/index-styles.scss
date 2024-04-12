@@ -1,12 +1,20 @@
+h1.title{
+    color: rgba(206, 206, 206, 0.8);
+}
+
+h3.btm-text{
+    color: rgba(206, 206, 206, 0.8)
+}
+
 #index-links{
     list-style-type: none;
 }
 
 #index-links li a{
     text-decoration: none;
-    color: grey;
+    color: rgb(159, 159, 159);
 }
 
 #index-links li a:hover{
-    color: rgb(181, 181, 181);
+    color: rgb(114, 114, 114);
 }

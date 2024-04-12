@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/index-styles.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,31 @@
     <%- include("../partials/nav.ejs") %>
 </head>
 <body>
-    
+    <div class="gradient"></div>
+    <div id="contactBody" class="container d-flex justify-content-center flex-column">
+        <div class="divCards card p-5 m-4">
+            <h1>CONTACT.</h1>
+            <hr>
+            <div class="d-flex flex-column">
+                <div class="d-flex justify-content-between pb-4">
+                    <h4>E-MAIL</h3>
+                    <a href="mailto:whaihoek@gmail.com">whaihoek@gmail.com</a>
+                </div>
+                <div class="d-flex justify-content-between pb-4">
+                    <h4>RESUME</h3>
+                    <a href="#">Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+    navbarHeight = document.querySelector("#navbar").offsetHeight;
+    console.log(navbarHeight);
+    contactBody = document.querySelector("#contactBody")
+    height = document.documentElement.clientHeight - navbarHeight + "px"
+    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
+    contactBody.style.height = height
+</script>
