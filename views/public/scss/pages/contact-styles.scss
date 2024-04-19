@@ -3,19 +3,23 @@
     backdrop-filter: blur(5px);
     border: none !important;
     border-radius: 1rem !important;
+    box-shadow: 10px 10px 21px #0000004f;
+    padding: 3rem;
+    margin: 1.5rem;
     
     hr{
         color: white;
         margin-top: 0;
         margin-bottom: 2rem;
         width: 35%;
-        
+        height: 3px;
+        background-color: white;
     }
     h1{
-        color: white;
+        color: #b6b6b6;
     }
     h4{
-        color: white;
+        color: #b6b6b6;
     }
     a{
         color: rgb(158, 158, 158);
@@ -25,3 +29,14 @@
         }
     }
 }
+
+@media (min-width: 320px) {
+    .divCards{
+        padding: 1.5rem !important;
+        margin: 1.5rem !important;
+
+        hr{
+            width: 50%;
+        }
+    }
+  }

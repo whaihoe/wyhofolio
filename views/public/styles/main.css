@@ -14,26 +14,40 @@ h3.btm-text {
 #index-links li a:hover {
   color: #727272; }
 
+@media (min-width: 320px) {
+  .indexContent {
+    padding: 1.5rem; } }
 .divCards {
   background-color: rgba(53, 53, 53, 0.21) !important;
   backdrop-filter: blur(5px);
   border: none !important;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  box-shadow: 10px 10px 21px #0000004f;
+  padding: 3rem;
+  margin: 1.5rem; }
   .divCards hr {
     color: white;
     margin-top: 0;
     margin-bottom: 2rem;
-    width: 35%; }
+    width: 35%;
+    height: 3px;
+    background-color: white; }
   .divCards h1 {
-    color: white; }
+    color: #b6b6b6; }
   .divCards h4 {
-    color: white; }
+    color: #b6b6b6; }
   .divCards a {
     color: #9e9e9e;
     font-size: 115%; }
     .divCards a:hover {
       color: #727272; }
 
+@media (min-width: 320px) {
+  .divCards {
+    padding: 1.5rem !important;
+    margin: 1.5rem !important; }
+    .divCards hr {
+      width: 50%; } }
 body {
   background-color: #1c1c1c !important; }
 
@@ -76,5 +90,42 @@ body {
 /* This is just to transition when you change the viewport size. */
 * {
   transition: all 0.25s ease-out; }
+
+.noise {
+  position: fixed;
+  z-index: 9999;
+  top: -300%;
+  left: -150%;
+  height: 600%;
+  width: 600%;
+  -webkit-animation: grain 7s steps(10) infinite;
+  animation: grain 7s steps(10) infinite;
+  background-image: url(/img/noise.png);
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: .15;
+  pointer-events: none; }
+
+@keyframes grain {
+  0%,to {
+    transform: translate(0); }
+  10% {
+    transform: translate(-5%, -10%); }
+  20% {
+    transform: translate(-15%, 5%); }
+  30% {
+    transform: translate(7%, -25%); }
+  40% {
+    transform: translate(-5%, 25%); }
+  50% {
+    transform: translate(-15%, 10%); }
+  60% {
+    transform: translate(15%); }
+  70% {
+    transform: translateY(15%); }
+  80% {
+    transform: translate(3%, 35%); }
+  90% {
+    transform: translate(-10%, 10%); } }
 
 /*# sourceMappingURL=main.css.map */

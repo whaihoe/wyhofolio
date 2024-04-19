@@ -17,7 +17,6 @@ body{
     --size: 300px;
     --speed: 6s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-  
     width: var(--size);
     height: var(--size);
     filter: blur(calc(var(--size) / 4));
@@ -40,6 +39,7 @@ body{
     .gradient {
       --size: 500px;
     }
+
   }
   
   body {
@@ -55,3 +55,60 @@ body{
     transition: all 0.25s ease-out;
   }
   
+  .noise {
+    position: fixed;
+    z-index: 9999;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    -webkit-animation: grain 7s steps(10) infinite;
+    animation: grain 7s steps(10) infinite;
+    background-image: url(/img/noise.png);
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: .15;
+    pointer-events: none;
+}
+
+@keyframes grain {
+  0%,to {
+      transform: translate(0)
+  }
+
+  10% {
+      transform: translate(-5%,-10%)
+  }
+
+  20% {
+      transform: translate(-15%,5%)
+  }
+
+  30% {
+      transform: translate(7%,-25%)
+  }
+
+  40% {
+      transform: translate(-5%,25%)
+  }
+
+  50% {
+      transform: translate(-15%,10%)
+  }
+
+  60% {
+      transform: translate(15%)
+  }
+
+  70% {
+      transform: translateY(15%)
+  }
+
+  80% {
+      transform: translate(3%,35%)
+  }
+
+  90% {
+      transform: translate(-10%,10%)
+  }
+}
