@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <%- include("../partials/nav.ejs") %>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="gradient"></div>
+    <div class="projects d-flex flex-column">
+        <div class="projectcardsmall">
+            <img class="hidden" src="/img/projs/dinersclub/dinersclublogo.png" alt="UIUX img" style="width: 100%;">
+            <a href="/projects/dinersclub" class="h1">UI/UX for Diners Club Singapore</a>
+        </div>
+
+        <div class="projectcardsmall">
+            <img class="hidden" src="/img/projs/dinersclub/dinersclublogo.png" alt="UIUX img" style="width: 100%;">
+            <a href="/projects/dinersclub" class="h1">Automated blockchain transaction</a>
+        </div>
+
+        <div class="projectcardsmall">
+            <img class="hidden" src="/img/projs/dinersclub/dinersclublogo.png" alt="UIUX img" style="width: 100%;">
+            <a href="/projects/dinersclub" class="h1">Andriod app development</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    navbarHeight = document.querySelector("#navbar").offsetHeight;
+    console.log(navbarHeight);
+    contactBody = document.querySelector("#contactBody")
+    height = document.documentElement.clientHeight - navbarHeight + "px"
+    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
+    contactBody.style.height = height
+</script>

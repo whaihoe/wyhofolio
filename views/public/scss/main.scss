@@ -1,5 +1,12 @@
 @import "pages/index-styles.scss";
 @import "pages/contact-styles.scss";
+@import "pages/projects-styles.scss";
+
+#navbar{
+  position: absolute;
+  z-index: 999999;
+}
+
 body{
     background-color: rgb(28, 28, 28) !important;
 }

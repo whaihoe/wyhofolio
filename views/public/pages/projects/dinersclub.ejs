@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <%- include("../../partials/nav.ejs") %>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="gradient"></div>
+    <div class="project d-flex flex-column">
+        <div class="projectcard diner card">
+            <img src="/img/projs/dinersclub/dinersclublogo.png" alt="UIUX img" style="width: 100%;">
+            <div class="card-body"> 
+                <h1 class="card-title pt-4 accent">UI/UX for Diners Club Singapore</h1>
+                <hr>
+                <div class="projectinfo d-flex">
+                    <div class="projectdata">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h5 class="accent">Category</h5>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Web devleopment</li>
+                                            <li>UI/UX design</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h5 class="accent">Year</h5>
+                                    </td>
+                                    <td>
+                                        <p>2020</p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h5 class="accent">
+                                            Softwares
+                                        </h5>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>JavaScript</li>
+                                            <li>Node</li>
+                                            <li>Sass Css</li>
+                                            <li>Ejs</li>
+                                            <li>Express</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h5 class="accent">
+                                            Duration
+                                        </h5>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            3 Months
+                                        </p>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="projectdescription"></div>
+                </div>
+            </div>            
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    navbarHeight = document.querySelector("#navbar").offsetHeight;
+    console.log(navbarHeight);
+    contactBody = document.querySelector("#contactBody")
+    height = document.documentElement.clientHeight - navbarHeight + "px"
+    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
+    contactBody.style.height = height
+</script>
