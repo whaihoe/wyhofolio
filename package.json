@@ -5,13 +5,13 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.5",
     "nodemon": "^3.1.0"
   },
-
   "scripts": {
     "start": "node app.js",
     "dev-win": "nodemon app.js | npm run scss",
     "dev-mac": "nodemon app.js & npm run scss",
     "scss": "sass --watch views/public/scss/main.scss:views/public/styles/main.css"
-}
+  }
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="noise"></div>
-    <div class="gradient"></div>
+    <div class="gradient" id="gradient"></div>
     <div class="project d-flex flex-column">
         <div class="projectcard diner card">
             <img src="/img/projs/dinersclub/dinersclublogo.png" alt="UIUX img" style="width: 100%;">
@@ -87,8 +87,11 @@
 <script>
     navbarHeight = document.querySelector("#navbar").offsetHeight;
     console.log(navbarHeight);
-    contactBody = document.querySelector("#contactBody")
-    height = document.documentElement.clientHeight - navbarHeight + "px"
-    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
-    contactBody.style.height = height
+    Body = document.querySelector("body");
+    height = document.documentElement.clientHeight - navbarHeight + "px";
+    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height);
+    Body.style.height = height;
+    gradient = document.getElementById("gradient");
+    console.log(gradient.style);
+    gradient.style.backgroundImage = "var(--DCS)";
 </script>

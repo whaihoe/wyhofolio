@@ -1,5 +1,6 @@
 
 .project{
+    --DCS: linear-gradient(hsla(202, 100%, 75%, 0.85), hsl(239, 94%, 50%));
     overflow: hidden;
     padding: 0 10rem 0 10rem;
 
@@ -74,6 +75,11 @@
 
         a{
             padding-left: 1rem;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
         }
 
         a::before {

@@ -1,6 +1,7 @@
 @import "pages/index-styles.scss";
 @import "pages/contact-styles.scss";
-@import "pages/projects-styles.scss";
+@import "pages/projectscard-styles.scss";
+
 
 #navbar{
   position: absolute;
@@ -9,6 +10,8 @@
 
 body{
     background-color: rgb(28, 28, 28) !important;
+    --original: linear-gradient(hsla(170, 82%, 57%, 0.85), hsl(252, 82%, 57%));
+    --DCS: linear-gradient(hsla(202, 100%, 75%, 0.85), hsl(239, 94%, 50%));
 }
 
 @keyframes rotate {
@@ -27,7 +30,7 @@ body{
     width: var(--size);
     height: var(--size);
     filter: blur(calc(var(--size) / 4));
-    background-image: linear-gradient(hsla(170, 82%, 57%, 0.85), hsl(252, 82, 57));
+    background-image: var(--original);
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 50% 30% 70% 50% / 50% 30% 70% 50%;
     position: absolute;
