@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h1 class="card-title pt-4 accent">Locky (Automated Blockchain Transactions)</h1>
                 <hr>
-                <div class="projectinfo d-flex justify-content-between">
+                <div class="projectinfo">
                     <div class="projectdata">
                         <table>
                             <tbody>
@@ -79,7 +79,6 @@
                         </table>
                     </div>
                     <div class="projectdescription">
-                        <h5 class="accent">Description</h5>
                         <p>We were tasked to integrate blockchain into a parcel collection app, creating an immutable ledger for order tracking. Our solution revolutionized parcel monitoring, ensuring tamper-proof records from delivery to collection. This project showcased our expertise in blockchain integration and our ability to drive innovation in logistics.</p>
                     </div>
                 </div>
@@ -90,13 +89,17 @@
 </body>
 </html>
 
-<script>
-    navbarHeight = document.querySelector("#navbar").offsetHeight;
-    console.log(navbarHeight);
-    Body = document.querySelector("body");
-    height = document.documentElement.clientHeight - navbarHeight + "px";
-    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height);
-    Body.style.height = height;
+<script>  
+    width = screen.width
+    if (width > 720){
+        navbarHeight = document.querySelector("#navbar").offsetHeight;
+        console.log(navbarHeight);
+        Body = document.querySelector("body");
+        height = document.documentElement.clientHeight - navbarHeight + "px";
+        console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height);
+        Body.style.height = height;
+    }
+
     gradient = document.getElementById("gradient");
     console.log(gradient.style);
     gradient.style.backgroundImage = "var(--locky)";

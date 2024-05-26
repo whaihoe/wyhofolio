@@ -70,7 +70,6 @@ h3.btm-text {
   }
 }
 .project {
-  --DCS: linear-gradient(hsla(202, 100%, 75%, 0.85), hsl(239, 94%, 50%));
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -104,6 +103,10 @@ h3.btm-text {
   height: 3px;
   background-color: white;
 }
+.project .projectcard .projectinfo {
+  display: flex;
+  justify-content: space-between;
+}
 .project .projectcard .projectinfo .projectdata {
   width: 100%;
 }
@@ -128,7 +131,7 @@ h3.btm-text {
 }
 
 .projects {
-  padding: 0 10rem 0 10rem;
+  padding: 5rem 10rem 0 10rem;
 }
 .projects .projectcardsmall {
   display: flex;
@@ -145,7 +148,7 @@ h3.btm-text {
   z-index: 999999;
 }
 .projects .projectcardsmall img {
-  width: 12rem !important;
+  width: 12rem;
 }
 .projects .projectcardsmall a {
   padding-left: 1rem;
@@ -154,15 +157,42 @@ h3.btm-text {
 .projects .projectcardsmall a:hover {
   text-decoration: underline;
 }
-.projects .projectcardsmall a::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
 
+@media only screen and (max-width: 768px) {
+  .projects {
+    padding: 5rem 0 0 0;
+    align-items: center;
+  }
+  .projects .projectcardsmall {
+    width: 95vw;
+    margin: 0 0 1rem 0;
+  }
+  .projects .projectcardsmall img {
+    width: 5rem;
+    border: none !important;
+    border-radius: 1rem !important;
+  }
+  .projects .projectcardsmall a {
+    font-size: larger;
+  }
+  .project .projectcard {
+    width: 95vw;
+    padding-bottom: 4rem;
+  }
+  .project .projectcard img {
+    width: 100%;
+    border: none;
+  }
+  .project .projectcard .card-body {
+    width: auto;
+  }
+  .project .projectcard .projectinfo {
+    flex-direction: column;
+  }
+  .project .projectcard .projectinfo .projectdata table {
+    width: 100%;
+  }
+}
 #navbar {
   position: absolute;
   z-index: 999999;

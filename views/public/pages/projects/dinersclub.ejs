@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h1 class="card-title pt-4 accent">UI/UX for Diners Club Singapore</h1>
                 <hr>
-                <div class="projectinfo d-flex justify-content-between">
+                <div class="projectinfo">
                     <div class="projectdata">
                         <table>
                             <tbody>
@@ -77,7 +77,6 @@
                         </table>
                     </div>
                     <div class="projectdescription">
-                        <h5 class="accent">Description</h5>
                         <p>The website was old and was just basic html with lists. I made cards for all the links with icons so that its easier on the eyes for the users. I added some parallax scrolling effects to some pages to make it look more polished and premium given that it is a credit card company.</p>
                     </div>
                 </div>
@@ -89,12 +88,16 @@
 </html>
 
 <script>
-    navbarHeight = document.querySelector("#navbar").offsetHeight;
-    console.log(navbarHeight);
-    Body = document.querySelector("body");
-    height = document.documentElement.clientHeight - navbarHeight + "px";
-    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height);
-    Body.style.height = height;
+   width = screen.width
+    if (width > 720){
+        navbarHeight = document.querySelector("#navbar").offsetHeight;
+        console.log(navbarHeight);
+        Body = document.querySelector("body");
+        height = document.documentElement.clientHeight - navbarHeight + "px";
+        console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height);
+        Body.style.height = height;
+    }
+
     gradient = document.getElementById("gradient");
     console.log(gradient.style);
     gradient.style.backgroundImage = "var(--DCS)";
