@@ -2,7 +2,8 @@
 .project{
     --DCS: linear-gradient(hsla(202, 100%, 75%, 0.85), hsl(239, 94%, 50%));
     overflow: hidden;
-    padding: 0 10rem 0 10rem;
+    display: flex;
+    justify-content: center;
 
     .projectcard{
     overflow: scroll;
@@ -13,10 +14,18 @@
     border-radius: 0 0 1rem 1rem !important;
     box-shadow: 10px 10px 21px #0000004f;
     color: white;
+    display: inline-block;
     
+    .card-body{
+        width: var(--bigProjImg);
+    }
+
     img{
+        width: var(--bigProjImg);
         border: none;
         border-radius: 0 0 2rem 2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     hr{
@@ -30,6 +39,7 @@
 
     .projectinfo{
         .projectdata{
+            width: 100%;
             td{
                 vertical-align: top;
                 padding: 0 1rem 0.5rem 0;
@@ -41,6 +51,10 @@
                 }
             }
         }
+        
+        .projectdescription{
+            width: 100%;
+        }
     }
 
     }
@@ -48,6 +62,11 @@
     .diner{
         .accent{
             color: #7ab1d0;
+        }
+    }
+    .locky{
+        .accent{
+            color: rgb(241, 222, 190);
         }
     }
 }

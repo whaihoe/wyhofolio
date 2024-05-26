@@ -26,6 +26,10 @@ app.get('/projects/Dinersclub', function(req, res) {
   res.render('public/pages/projects/dinersclub');
 });
 
+app.get('/projects/Locky', function(req, res) {
+  res.render('public/pages/projects/locky');
+});
+
 app.listen(port, () => {
   console.log(`Wyhofolio app listening on port ${port}`)
 })
