@@ -88,7 +88,7 @@ h3.btm-text {
 .project .projectcard .card-body {
   width: var(--bigProjImg);
 }
-.project .projectcard img {
+.project .projectcard .projimg {
   width: var(--bigProjImg);
   border: none;
   border-radius: 0 0 2rem 2rem;
@@ -122,6 +122,15 @@ h3.btm-text {
 }
 .project .projectcard .projectinfo .projectdescription {
   width: 100%;
+}
+.project .projectcard .contentimg {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+}
+.project .projectcard .contentheader {
+  margin: 0.5rem 0 0.5rem 0;
+  text-align: center;
 }
 .project .diner .accent {
   color: #7ab1d0;
@@ -179,7 +188,7 @@ h3.btm-text {
     width: 95vw;
     padding-bottom: 4rem;
   }
-  .project .projectcard img {
+  .project .projectcard .projimg {
     width: 100%;
     border: none;
   }

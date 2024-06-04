@@ -19,7 +19,7 @@
         width: var(--bigProjImg);
     }
 
-    img{
+    .projimg{
         width: var(--bigProjImg);
         border: none;
         border-radius: 0 0 2rem 2rem;
@@ -56,6 +56,17 @@
         .projectdescription{
             width: 100%;
         }
+    }
+
+    .contentimg {
+        width: 100%;
+        border: none;
+        border-radius: 1rem;
+    }
+
+    .contentheader{
+        margin: 0.5rem 0 0.5rem 0;
+        text-align: center;
     }
 
     }
@@ -127,7 +138,7 @@
         .projectcard{
             width: 95vw;
             padding-bottom: 4rem;
-            img{
+            .projimg{
                 width: 100%;
                 border: none;
             }
