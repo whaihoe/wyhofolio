@@ -10,16 +10,30 @@ h3.btm-text{
     list-style-type: none;
 }
 
-#index-links li a{
-    text-decoration: none;
-    color: rgb(159, 159, 159);
+#index-links li{
+    a{
+        text-decoration: none;
+        color: rgb(159, 159, 159);
+    }
+
+    a{
+        background: 
+        linear-gradient(to left, rgb(159, 159, 159), rgb(159, 159, 159), rgb(159, 159, 159));
+        background-size: 0 0.1em;
+        background-position: 0 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+    }
+
+    a:hover,
+    a:focus {
+        background-size: 100% 0.1em, 0 0.1em;
+    }
 }
 
-#index-links li a:hover{
-    color: rgb(114, 114, 114);
-    font-weight: bold;
-    text-decoration: underline;
-}
+// #index-links li a:hover{
+//     color: rgb(114, 114, 114);
+// }
 
 @media (min-width: 320px) {
     .indexContent{

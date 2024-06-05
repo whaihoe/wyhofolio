@@ -10,11 +10,15 @@ h3.btm-text {
 #index-links li a {
   text-decoration: none;
   color: #9f9f9f; }
-
-#index-links li a:hover {
-  color: #727272;
-  font-weight: bold;
-  text-decoration: underline; }
+#index-links li a {
+  background: linear-gradient(to left, #9f9f9f, #9f9f9f, #9f9f9f);
+  background-size: 0 0.1em;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms; }
+#index-links li a:hover,
+#index-links li a:focus {
+  background-size: 100% 0.1em, 0 0.1em; }
 
 @media (min-width: 320px) {
   .indexContent {
@@ -37,15 +41,21 @@ h3.btm-text {
   .divCards h1 {
     color: #d5d5d5; }
   .divCards h4 {
-    color: #d5d5d5; }
+    color: #d5d5d5;
+    margin-bottom: 0; }
   .divCards a {
-    color: #c1c1c1;
-    font-size: 115%;
-    text-decoration: none; }
-    .divCards a:hover {
-      color: #727272;
-      font-weight: bold;
-      text-decoration: underline; }
+    text-decoration: none;
+    color: #9f9f9f;
+    font-size: 115%; }
+  .divCards a {
+    background: linear-gradient(to left, #727272, #727272, #727272);
+    background-size: 0 0.1em;
+    background-position: 0 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms; }
+  .divCards a:hover,
+  .divCards a:focus {
+    background-size: 100% 0.1em, 0 0.1em; }
 
 @media (min-width: 320px) {
   .divCards {

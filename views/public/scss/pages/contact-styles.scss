@@ -20,17 +20,39 @@
     }
     h4{
         color: #d5d5d5;
+        margin-bottom: 0;
     }
+    // a{
+    //     color: rgb(193, 193, 193);
+    //     font-size: 115%;
+    //     text-decoration: none;
+    //     &:hover{
+    //         color: rgb(114, 114, 114);
+    //         font-weight: bold;
+    //         text-decoration: underline;
+    //     }
+    // }
+
     a{
-        color: rgb(193, 193, 193);
-        font-size: 115%;
         text-decoration: none;
-        &:hover{
-            color: rgb(114, 114, 114);
-            font-weight: bold;
-            text-decoration: underline;
-        }
+        color: rgb(159, 159, 159);
+        font-size: 115%;
     }
+
+    a{
+        background: 
+        linear-gradient(to left, rgb(114, 114, 114), rgb(114, 114, 114), rgb(114, 114, 114));
+        background-size: 0 0.1em;
+        background-position: 0 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+    }
+
+    a:hover,
+    a:focus {
+        background-size: 100% 0.1em, 0 0.1em;
+    }
+    
 }
 
 @media (min-width: 320px) {
