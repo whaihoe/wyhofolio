@@ -1,37 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-wf-page="66ac80b855b4425b83cfc9d2" data-wf-site="66ac80b855b4425b83cfc9c5" data-wf-status="1" lang="en">
+
 <head>
-    <link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyho Portfolio</title>
+    <title>Projects</title>
 </head>
-<%- include("../partials/nav.ejs") %>
-<body>
-    <div class="noise"></div>
-    <div class="gradient"></div>
-    <div id="indexBody" class="container d-flex align-items-center justify-content-center flex-column">
-        <div class="indexContent">
-            <h1 class="title text-center">Hey! I am Whai Hoe</h1>
-            <h3 class="btm-text">I am a web developer, UI/UX designer and a programmer!</h3>
-            <div class="pt-2">
-                <ul id="index-links" class="ps-0">
-                    <li class="h4"><a href="/projects">Projects</a></li>
-                    <li class="h4"><a href="/contact-me">Contact me</a></li>
-                    <li class="h4"><a href="/education">Education</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 
-<script>
-    navbarHeight = document.querySelector("#navbar").offsetHeight;
-    console.log(navbarHeight);
-    indexBody = document.querySelector("#indexBody")
-    height = document.documentElement.clientHeight - navbarHeight + "px"
-    console.log(document.documentElement.clientHeight + " " + navbarHeight + " " + height)
-    indexBody.style.height = height
-</script>
+
+<body class="body">
+	<div class="cursor-wrapper">
+		<div class="cursor"></div>
+		<div class="cursor-outline"></div>
+	</div>
+	<section id="hero-section" class="hero-section">
+		<div class="spline-bg">
+			<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.42/build/spline-viewer.js" async></script>
+			<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/KM7x2v8kkGzLlt4C/scene.splinecode"><img src="data:image/png;base64,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" alt="Spline preview" style="width: 100%; height: 100%;"/></spline-viewer>
+		</div>
+			<div class="text-div">
+				<div class="heading-div">
+					<h1 class="hero-top-header">Hi, I am Whai Hoe.</h1>
+					<h1 class="hero-bottom-header">A web-developer &amp; designer.</h1>
+					<ul role="list" class="list">
+						<li class="projects-li"><a data-w-id="e457be6b-6592-edd5-b9b2-2dfe47148c61" href="#projects"
+								class="main-links proj">Projects.</a>
+							<div style="-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+								class="div-block-4 port-line"></div>
+						</li>
+						<li class="contact-li"><a data-w-id="5294a485-aa8c-790d-ce1f-72704222bae4" href="#"
+								class="main-links contact">Contact me.</a>
+							<div style="-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+								class="div-block-4 contact-line"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section id="projects" class="proj-section">
+		<h1>Projects:</h1>
+	</section>
+</body>
+
+</html>

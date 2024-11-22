@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/views/public'));
 app.use('/partials', express.static(__dirname + '/views/public/partials'));
 app.use('/styles', express.static(__dirname + '/views/public/styles'));
+app.use('/js', express.static(__dirname + '/views/public/JS'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.get('/', function(req, res) {

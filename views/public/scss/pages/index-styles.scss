@@ -1,42 +1,66 @@
-h1.title{
-    color: rgba(206, 206, 206, 0.8);
-}
+.hero-section{
+    height: 100svh;
+    width: 100vw;
 
-h3.btm-text{
-    color: rgba(206, 206, 206, 0.8)
-}
-
-#index-links{
-    list-style-type: none;
-}
-
-#index-links li{
-    a{
-        text-decoration: none;
-        color: rgb(159, 159, 159);
+    .spline-bg{
+        position: absolute;
+        z-index: 0;
+        width: 100vw;
+        height: 100svh
     }
+    
+    .text-div{
+        display: flex;
+        z-index: 100;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
 
-    a{
-        background: 
-        linear-gradient(to left, rgb(159, 159, 159), rgb(159, 159, 159), rgb(159, 159, 159));
-        background-size: 0 0.1em;
-        background-position: 0 100%, 0 100%;
-        background-repeat: no-repeat;
-        transition: background-size 400ms;
-    }
+        .heading-div{
+            z-index: 1;
+        }
+    
+        h1{
+            color: white;
+            font-weight: bold;
+        }
+    
+        ul{
+            padding-left: 0;
+            display: flex;
+            gap: 5rem;
 
-    a:hover,
-    a:focus {
-        background-size: 100% 0.1em, 0 0.1em;
+            li{
+                list-style-type: none;
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
+                position: relative;
+            }
+            a::after{
+                content: "";
+                position: absolute;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                background: white;
+                transition: width .2s;
+            }
+
+            a:hover:after{
+                width: 100%;
+            }
+
+        }
     }
+    
+    
 }
 
-// #index-links li a:hover{
-//     color: rgb(114, 114, 114);
-// }
-
-@media (min-width: 320px) {
-    .indexContent{
-        padding: 1.5rem;
-    }
+#projects{
+    color: white;
 }
+

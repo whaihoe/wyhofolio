@@ -1,28 +1,48 @@
-h1.title {
-  color: rgba(206, 206, 206, 0.8); }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.hero-section {
+  height: 100svh;
+  width: 100vw; }
+  .hero-section .spline-bg {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: 100svh; }
+  .hero-section .text-div {
+    display: flex;
+    z-index: 100;
+    height: 100%;
+    justify-content: center;
+    align-items: center; }
+    .hero-section .text-div .heading-div {
+      z-index: 1; }
+    .hero-section .text-div h1 {
+      color: white;
+      font-weight: bold; }
+    .hero-section .text-div ul {
+      padding-left: 0;
+      display: flex;
+      gap: 5rem; }
+      .hero-section .text-div ul li {
+        list-style-type: none; }
+      .hero-section .text-div ul a {
+        color: white;
+        text-decoration: none;
+        position: relative; }
+      .hero-section .text-div ul a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background: white;
+        transition: width .2s; }
+      .hero-section .text-div ul a:hover:after {
+        width: 100%; }
 
-h3.btm-text {
-  color: rgba(206, 206, 206, 0.8); }
+#projects {
+  color: white; }
 
-#index-links {
-  list-style-type: none; }
-
-#index-links li a {
-  text-decoration: none;
-  color: #9f9f9f; }
-#index-links li a {
-  background: linear-gradient(to left, #9f9f9f, #9f9f9f, #9f9f9f);
-  background-size: 0 0.1em;
-  background-position: 0 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms; }
-#index-links li a:hover,
-#index-links li a:focus {
-  background-size: 100% 0.1em, 0 0.1em; }
-
-@media (min-width: 320px) {
-  .indexContent {
-    padding: 1.5rem; } }
 .divCards {
   background-color: rgba(53, 53, 53, 0.21) !important;
   backdrop-filter: blur(5px);
@@ -96,7 +116,8 @@ h3.btm-text {
       background-color: white; }
     .project .projectcard .projectinfo {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      margin-top: 1rem; }
       .project .projectcard .projectinfo .projectdata {
         width: 100%; }
         .project .projectcard .projectinfo .projectdata td {
@@ -136,7 +157,8 @@ h3.btm-text {
     color: white !important;
     z-index: 999999; }
     .projects .projectcardsmall img {
-      width: 12rem; }
+      width: 12rem;
+      border-radius: 1rem; }
     .projects .projectcardsmall a {
       margin-left: 1rem;
       text-decoration: none; }
@@ -178,92 +200,12 @@ h3.btm-text {
         flex-direction: column; }
         .project .projectcard .projectinfo .projectdata table {
           width: 100%; } }
-#navbar {
-  position: absolute;
-  z-index: 999999; }
-
 body {
-  background-color: #1c1c1c !important;
+  background-color: #121212 !important;
   --original: linear-gradient(hsla(170, 82%, 57%, 0.85), hsl(252, 82%, 57%));
   --DCS: linear-gradient(hsla(202, 100%, 75%, 0.85), hsl(239, 94%, 50%));
   --locky: linear-gradient(rgb(192, 239, 255), rgb(136, 107, 105));
-  --bigProjImg: 55rem; }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-.gradient {
-  --size: 300px;
-  --speed: 6s;
-  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-  width: var(--size);
-  height: var(--size);
-  filter: blur(calc(var(--size) / 4));
-  background-image: var(--original);
-  animation: rotate var(--speed) var(--easing) alternate infinite;
-  border-radius: 50% 30% 70% 50% / 50% 30% 70% 50%;
-  position: absolute;
-  z-index: -100;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-top: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-@media (min-width: 720px) {
-  .gradient {
-    --size: 500px; } }
-body {
-  background-color: #222;
-  inset: 0;
-  place-content: center;
-  align-items: center;
-  overflow: hidden; }
-
-/* This is just to transition when you change the viewport size. */
-* {
-  transition: all 0.25s ease-out; }
-
-.noise {
-  position: fixed;
-  z-index: 9999;
-  top: -300%;
-  left: -150%;
-  height: 600%;
-  width: 600%;
-  -webkit-animation: grain 7s steps(10) infinite;
-  animation: grain 7s steps(10) infinite;
-  background-image: url(/img/noise.png);
-  background-size: 200px;
-  background-repeat: repeat;
-  opacity: .15;
-  pointer-events: none; }
-
-@keyframes grain {
-  0%,to {
-    transform: translate(0); }
-  10% {
-    transform: translate(-5%, -10%); }
-  20% {
-    transform: translate(-15%, 5%); }
-  30% {
-    transform: translate(7%, -25%); }
-  40% {
-    transform: translate(-5%, 25%); }
-  50% {
-    transform: translate(-15%, 10%); }
-  60% {
-    transform: translate(15%); }
-  70% {
-    transform: translateY(15%); }
-  80% {
-    transform: translate(3%, 35%); }
-  90% {
-    transform: translate(-10%, 10%); } }
+  --bigProjImg: 55rem;
+  --bs-body-font-family: poppins ; }
 
 /*# sourceMappingURL=main.css.map */
